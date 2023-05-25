@@ -1,0 +1,24 @@
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+<h1>Markets</h1>
+    <table style="width:100%">
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>State</th>
+        <th></th>
+      </tr>
+
+<% @facade.all_markets.each do |market| %> 
+      <tr>
+        <td><%= market.name %></td>
+        <td><%= market.city %></td>
+        <td><%= market.state %></td>
+        <td><%= button_to "More Info" %></td>
+      </tr>
+<% end %>
+    </table>

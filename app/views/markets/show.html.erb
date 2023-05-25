@@ -1,0 +1,9 @@
+<h1>Show Page</h1>
+<%= @facade.one_market.name %><br>
+<%= @facade.one_market.street %><br>
+<%= @facade.one_market.city %>, <%= @facade.one_market.state %> <%= @facade.one_market.zip %>
+<br>
+<h2>Vendors at our Markets:</h2>
+<% @facade.vendors_for_market.each do |vendor| %>
+  <%= link_to vendor.name, vendor_path %><br>
+<% end %>
